@@ -49,6 +49,7 @@ const StyledText = styled.div`
 const StyledPic = styled.div`
   position: relative;
   max-width: 300px;
+  display: none;
 
   @media (max-width: 768px) {
     margin: 50px auto 0;
@@ -65,11 +66,12 @@ const StyledPic = styled.div`
 
     &:hover,
     &:focus {
+      background: transparent;
       outline: 0;
-      transform: translate(-4px, -4px);
 
       &:after {
-        transform: translate(8px, 8px);
+        top: 15px;
+        left: 15px;
       }
 
       .img {
@@ -106,8 +108,8 @@ const StyledPic = styled.div`
 
     &:after {
       border: 2px solid var(--green);
-      top: 14px;
-      left: 14px;
+      top: 20px;
+      left: 20px;
       z-index: -1;
     }
   }
@@ -125,7 +127,16 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+  const skills = [
+    'JavaScript (ES6+), TypeScript',
+    'React, Redux, GraphQL',
+    'Laravel, Symfony',
+    'Vue, Vuex, Vuetify',
+    'Node.js, Express.js',
+    'Wordpress, Shopify',
+    'Firebase, Docker, AWS, Heroku',
+    'Django, Flask',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,33 +146,14 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Prolific, full stack developer with +10 years of experience in frontend and
+              backend development. I always try to implement the very best approaches and paradigms.
+              My main goal is to work with ambitious and agile business owners and entrepreneurs who
+              can visualize and describe their ideas. I am proficient in Django/Laravel and modern
+              JavaScript frameworks like React, Vue.js, and Express.js.
             </p>
 
-            <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
-            </p>
-
-            <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
-              </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
-            </p>
-
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>Here are a few technologies I've been working with recently:</p>
           </div>
 
           <ul className="skills-list">

@@ -168,7 +168,7 @@ const Jobs = () => {
   const data = useStaticQuery(graphql`
     query {
       jobs: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/content/jobs/" } }
+        filter: { fileAbsolutePath: { regex: "/jobs/" } }
         sort: { fields: [frontmatter___date], order: DESC }
       ) {
         edges {
@@ -262,7 +262,7 @@ const Jobs = () => {
                   tabIndex={activeTabId === i ? '0' : '-1'}
                   aria-selected={activeTabId === i ? true : false}
                   aria-controls={`panel-${i}`}>
-                  <span>{company}</span>
+                  <span className="tab-company-name">{company}</span>
                 </StyledTabButton>
               );
             })}
