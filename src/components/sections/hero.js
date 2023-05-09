@@ -59,11 +59,11 @@ const Hero = () => {
   }, []);
 
   const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">David Jin.</h2>;
+  const two = <h2 className="big-heading">Richard Cole.</h2>;
   const three = <h3 className="big-heading">I build things for the web.</h3>;
   const four = (
     <p>
-      I'm a dedicated and disciplined web developer based in Canada with extensive experience
+      I'm a dedicated and disciplined web developer with extensive experience
       and a deep passion for programming.
     </p>
   );
