@@ -1,9 +1,9 @@
 ---
-date: '2022-11-14'
+date: '2022-12-05'
 title: 'Software Developer'
 company: 'REVKIT'
 location: 'CO, United State'
-range: 'Nov 2022 - Present'
+range: 'DEC 2022 - Present'
 url: 'https://revkit.com/'
 ---
 
